@@ -1,7 +1,7 @@
 /*
 * 파일이름: Account.cpp
 * 작성자: 주성환
-* 업데이트 정보: [2022-07-25] 파일버전 0.7
+* 업데이트 정보: [2022-07-28] 파일버전 0.8
 */
 #include "Account.h"
 #include "BankingCommonDec1.h"
