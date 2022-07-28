@@ -41,3 +41,13 @@ void Account::ShowAccInfo() const
 	cout << "이름: " << cusName << endl;
 	cout << "잔액: " << balance << endl;
 }
+Account& Account::operator=(Account& ref)	//추가된 함수
+{
+	accID = ref.accID;
+	balance = ref.balance;
+	if (cusName != NULL)
+		delete[] cusName;
+	cusName = new char[strlen(ref.cusName) + 1];
+	strcpy(cusName, ref.cusName);
+	return *this;
+}
