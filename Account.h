@@ -24,6 +24,5 @@ public:
 	virtual void Deposit(const int money);
 	int Withdraw(const int money);
 	void ShowAccInfo() const;
-	Account& operator=(Account& ref);
 };
 #endif // !__ACCOUNT_H_
