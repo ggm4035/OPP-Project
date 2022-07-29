@@ -1,7 +1,7 @@
 /*
 * 파일이름: HighCreditAccount.h
 * 작성자: 주성환
-* 업데이트 정보: [2022-07-25] 파일버전 0.7
+* 업데이트 정보: [2022-07-29] 파일버전 0.9
 * 클래스 이름: HighcreditAccount
 * 클래스 유형: Entity 클래스, NormalAccount 상속
 */
@@ -15,11 +15,11 @@ class HighCreditAccount : public NormalAccount
 private:
 	double CreditRate;
 public:
-	HighCreditAccount(int ID, int money, char* name, double intrst, double CRDRate);
+	HighCreditAccount(int ID, int money, String name, double intrst, double CRDRate);
 	void Deposit(const int money);
 };
 
-HighCreditAccount::HighCreditAccount(int ID, int money, char* name, double intrst, double CRDRate)
+HighCreditAccount::HighCreditAccount(int ID, int money, String name, double intrst, double CRDRate)
 	:NormalAccount(ID, money, name, intrst), CreditRate(CRDRate) {}
 void HighCreditAccount::Deposit(const int money)
 {
