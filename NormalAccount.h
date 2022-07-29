@@ -1,7 +1,7 @@
 /*
 * 파일이름: NormalAccount.h
 * 작성자: 주성환
-* 업데이트 정보: [2022-07-25] 파일버전 0.7
+* 업데이트 정보: [2022-07-29] 파일버전 0.9
 * 클래스 이름: NormalAccount
 * 클래스 유형: Entity 클래스, Account 상속
 */
@@ -15,11 +15,11 @@ class NormalAccount : public Account
 private:
 	double interest;
 public:
-	NormalAccount(int ID, int money, char* name, double Intrst);
+	NormalAccount(int ID, int money, String name, double Intrst);	//char* -> String으로 변경
 	void Deposit(const int money);
 };
 
-NormalAccount::NormalAccount(int ID, int money, char* name, double Intrst)
+NormalAccount::NormalAccount(int ID, int money, String name, double Intrst)
 	: Account(ID, money, name), interest(Intrst) { }
 void NormalAccount::Deposit(const int money)
 {
