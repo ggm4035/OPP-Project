@@ -1,25 +1,13 @@
 /*
 * 파일이름: Account.cpp
 * 작성자: 주성환
-* 업데이트 정보: [2022-07-25] 파일버전 0.7
+* 업데이트 정보: [2022-07-29] 파일버전 0.9
+* 기존의 복사생성자, 소멸자, 대입연산자는 String클래스의 사용으로 불필요해져서 삭제.
 */
 #include "Account.h"
 #include "BankingCommonDec1.h"
 
-Account::Account(int ID, int money, char* name) :accID(ID), balance(money)
-{
-	cusName = new char[strlen(name) + 1];
-	strcpy(cusName, name);
-}
-Account::Account(const Account& copy) : accID(copy.accID), balance(copy.balance)
-{
-	cusName = new char[strlen(copy.cusName) + 1];
-	strcpy(cusName, copy.cusName);
-}
-Account::~Account()
-{
-	delete[] cusName;
-}
+Account::Account(int ID, int money, String name) :accID(ID), balance(money), cusName(name) { }		//생성자
 int Account::GetAccID() const
 {
 	return accID;
