@@ -8,8 +8,11 @@ Account 클래스는 생성자에서 문자열을 동적 할당 하기 때문에
 실제 변경이 발생하는 헤더파일과 소스파일
 
 Account.h, Account.cpp
+
 NormalAccount.h
+
 HighCreditAccount.h
+
 AccountHandler.cpp
 
 
