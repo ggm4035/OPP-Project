@@ -1,7 +1,8 @@
 /*
 * 파일이름: AccountHandler.cpp
 * 작성자: 주성환
-* 업데이트 정보: [2022-07-25] 파일버전 0.7
+* 업데이트 정보: [2022-07-29] 파일버전 0.9
+* 기존 char형 name을 String클래스로 대체.(111, 117행)
 */
 
 #include "AccountHandler.h"
@@ -10,12 +11,12 @@
 #include "HighCreditAccount.h"
 #include "NormalAccount.h"
 
-AccountHandler::AccountHandler() : accNum(0)
+AccountHandler::AccountHandler() : accNum(0)	//생성자
 {
 	for (int i = 0; i < MAX_NUM; i++)
 		accArr[i] = NULL;
 }
-AccountHandler::~AccountHandler()
+AccountHandler::~AccountHandler()			//소멸자
 {
 	for (int i = 0; i < accNum; i++)
 		delete accArr[i];
@@ -56,7 +57,7 @@ void AccountHandler::DepositMoney(void)
 	int money;
 	int id;
 
-	cout << "[입	금" << endl;
+	cout << "[입	금]" << endl;
 	cout << "계좌ID: "; cin >> id;
 	cout << "입금액: "; cin >> money;
 
@@ -107,7 +108,7 @@ void AccountHandler::ShowAllAccInfo(void) const
 void AccountHandler::NormalAcc(void)
 {
 	int id, balance;
-	char name[NAME_LEN];
+	String name;
 	double interestRate;
 
 	cout << "[보통예금계좌 개설]" << endl;
@@ -123,7 +124,7 @@ void AccountHandler::NormalAcc(void)
 void AccountHandler::HighcreditAcc(void)
 {
 	int id, balance, creditRate;
-	char name[NAME_LEN];
+	String name;
 	double interestRate;
 
 	cout << "[신용신뢰계좌 개설]" << endl;
