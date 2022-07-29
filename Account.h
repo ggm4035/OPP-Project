@@ -15,7 +15,7 @@ class Account
 private:
 	int accID;
 	int balance;
-	String cusName;
+	String cusName;		//char* 문을 String클래스로 대체.
 public:
 	Account(int ID, int money, String name);
 
