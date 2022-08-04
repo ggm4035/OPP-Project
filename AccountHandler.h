@@ -10,11 +10,13 @@
 #define __ACC_HANDLER_H_
 #include "Account.h"
 #include "BankingCommonDec1.h"
+#include "AccountArray.h"
+#include "AccountArray.cpp"
 
 class AccountHandler
 {
 private:
-	Account* accArr[MAX_NUM];
+	AccountArray<Account*> accArr;
 	int accNum;
 public:
 	AccountHandler();
